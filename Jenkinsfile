@@ -19,7 +19,7 @@ pipeline {
         stage('running npm version'){
             agent any
             steps{
-                bat 'npm --version'
+                sh 'npm --version'
             }
         }
     }
