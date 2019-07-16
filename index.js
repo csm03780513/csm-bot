@@ -153,5 +153,5 @@ httpServer.listen(httpPort, () => {
 });
 
 httpsServer.listen(httpsPort, () => {
-    console.log('HTTPS Server running on port::' + httpsPort);
+    console.log('HTTPS Server running on port::::' + httpsPort);
 });
