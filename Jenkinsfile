@@ -16,6 +16,12 @@ pipeline {
                 echo 'Testing stuff...'
             }
         }
+        stage('Checking NPM version'){
+            agent any
+            steps{
+                sh 'npm --version'
+            }
+        }
     }
 }
 
