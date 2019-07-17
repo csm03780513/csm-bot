@@ -17,7 +17,7 @@ pipeline {
         stage('Test') {
             agent any
             steps {
-                echo 'Testing stuff...'
+                sh 'node index.js'
             }
         }
         stage('running npm version'){
