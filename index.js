@@ -97,7 +97,7 @@ app.all('/new-message', function (req, res) {
                 )
                 .then(response => {
                     // We get here if the message was successfully posted
-                    console.log('Message posted')
+                    console.log('Message posted as expected')
                     res.end('ok')
                 })
                 .catch(err => {
