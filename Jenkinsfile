@@ -1,8 +1,10 @@
 pipeline {
     agent any 
-
-
     stages {
+        stage('Clone Repo Git')
+       {
+        checkout scm
+       }
         stage('Build Assets') {
             agent any 
 
