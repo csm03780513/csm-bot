@@ -15,7 +15,6 @@ app.use(
     })
 ) // for parsing application/x-www-form-urlencoded
 
-const pasdi;
 
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/li1659-253.members.linode.com/privkey.pem', 'utf8');
 const certificate = fs.readFileSync('/etc/letsencrypt/live/li1659-253.members.linode.com/cert.pem', 'utf8');
