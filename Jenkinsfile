@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Clone Repo Git')
        {
+              steps {
         checkout scm
+              }
        }
         stage('Build Assets') {
             agent any 
