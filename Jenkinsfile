@@ -3,27 +3,20 @@ pipeline {
     stages {
         stage('Clone Repo Git')
        {
-              steps {
+            steps {
         checkout scm
               }
        }
-        stage('Build Assets') {
-            agent any 
-
-            steps {
-                echo 'Building Assets'
-            }
-        }
-        stage('Test') {
+        stage('updating node modules') {
             agent any
             steps {
-                sh 'node index.js'
+                sh 'npm i'
             }
         }
-        stage('running npm version'){
+        stage('start node App'){
             agent any
             steps{
-                sh 'npm --version'
+                sh 'node index.js'
             }
         }
     }
