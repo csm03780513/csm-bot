@@ -10,9 +10,9 @@ pipeline {
         stage('updating node modules') {
             agent any
             steps {
-                sh 'sudo cd /opt/csm-bot'
-                sh 'sudo npm i'
-                sh 'sudo node index.js'
+                sh 'cd /opt/csm-bot'
+                sh 'npm i'
+                sh 'node index.js'
                 sh 'ls'
             }
         }
