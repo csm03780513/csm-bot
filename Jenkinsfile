@@ -12,12 +12,14 @@ pipeline {
             steps {
                 sh 'cd /opt/csm-bot'
                 sh 'npm i'
+                sh 'node index.js'
+                sh 'ls'
             }
         }
         stage('start node App'){
             agent any
             steps{
-                sh 'node index.js'
+                sh 'ls'
             }
         }
     }
