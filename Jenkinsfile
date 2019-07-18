@@ -10,6 +10,7 @@ pipeline {
         stage('updating node modules') {
             agent any
             steps {
+                sh 'cd /opt/csm-bot'
                 sh 'npm i'
             }
         }
