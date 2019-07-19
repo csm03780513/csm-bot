@@ -11,7 +11,7 @@ pipeline {
             agent any
             steps {
                 sh 'npm i'
-                sh 'node index.js'
+                sh 'sudo node index.js'
                 sh 'ls'
             }
         }
