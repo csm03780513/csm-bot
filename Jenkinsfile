@@ -16,7 +16,7 @@ pipeline {
         
         stage('Booting App') {
             steps {
-                //sh 'pm2 stop index.js'
+                sh 'pm2 stop index.js'
                 sh 'pm2 start index.js'
             }
         }
