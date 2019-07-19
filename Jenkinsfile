@@ -10,7 +10,7 @@ pipeline {
         stage('updating node modules') {
             agent any
             steps {
-                sh 'npm i' 
+                sh 'git status'
                 sh 'ls'
             }
         }
@@ -18,6 +18,7 @@ pipeline {
             agent any
             steps{
                 sh 'cd /opt/csm-bot'
+                sh 'npm i'
                 sh 'pm2 start index.js'
             }
         }
