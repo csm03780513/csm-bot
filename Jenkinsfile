@@ -16,12 +16,6 @@ pipeline {
                 sh 'ls'
             }
         }
-        stage('start node App'){
-            agent any
-            steps{
-                sh 'ls'
-            }
-        }
     }
 }
 
