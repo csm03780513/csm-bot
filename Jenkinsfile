@@ -11,8 +11,8 @@ pipeline {
             agent any
             steps{
                 sh 'cd /opt/csm-bot'
-                sh 'npm i'
-                sh 'node index.js'
+                sh 'sudo npm i'
+                //sh 'node index.js'
             }
         }
     }
