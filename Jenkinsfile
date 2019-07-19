@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'cd /opt/csm-bot'
                // sh 'sudo npm i'
-                sh 'sudo node index.js'
+               // sh 'sudo node index.js'
                 sh 'ls'
             }
         }
