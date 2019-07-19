@@ -13,13 +13,10 @@ pipeline {
                 sh 'npm i'
             }
         }
-        stage('stopping App') {
+        
+        stage('Booting App') {
             steps {
-                sh 'pm2 stop index.js'
-            }
-        }
-        stage('starting App') {
-            steps {
+                //sh 'pm2 stop index.js'
                 sh 'pm2 start index.js'
             }
         }
