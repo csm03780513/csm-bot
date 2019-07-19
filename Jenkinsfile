@@ -13,10 +13,14 @@ pipeline {
                 sh 'npm i'
             }
         }
-        stage('starting node modules') {
-            agent any
+        stage('stopping App') {
             steps {
-                sh 'pm2 restart index.js'
+                sh 'pm2 stop index.js'
+            }
+        }
+        stage('starting App') {
+            steps {
+                sh 'pm2 start index.js'
             }
         }
     }
