@@ -16,7 +16,7 @@ pipeline {
         stage('starting node modules') {
             agent any
             steps {
-                sh 'sudo pm2 restart index.js'
+                sh 'pm2 restart index.js'
             }
         }
     }
