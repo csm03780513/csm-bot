@@ -16,9 +16,9 @@ app.use(
 ) // for parsing application/x-www-form-urlencoded
 
 
-//const privateKey = fs.readFileSync('/etc/letsencrypt/live/li1659-253.members.linode.com/privkey.pem', 'utf8');
-//const certificate = fs.readFileSync('/etc/letsencrypt/live/li1659-253.members.linode.com/cert.pem', 'utf8');
-//const ca = fs.readFileSync('/etc/letsencrypt/live/li1659-253.members.linode.com/chain.pem', 'utf8');
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/li1659-253.members.linode.com/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/li1659-253.members.linode.com/cert.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/li1659-253.members.linode.com/chain.pem', 'utf8');
 const httpsPort = 8443;
 const httpPort = 3000;
 const gameUrl = 'https://li1659-253.members.linode.com';
@@ -151,6 +151,6 @@ httpServer.listen(httpPort, () => {
     console.log('HTTP Server running on port::' + httpPort);
 });
 
-httpsServer.listen(httpsPort, () => {
+httpsServer.listen(httpsPort,'', () => {
     console.log('HTTPS Server running on port::::' + httpsPort);
 });
