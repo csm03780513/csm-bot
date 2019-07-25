@@ -33,6 +33,7 @@ const credentials = {
     ca: ca
 };
 
+/*
 //This is the route the API will call
 app.all('/new-message', function (req, res) {
     const { message } = req.body;
@@ -106,7 +107,8 @@ app.all('/new-message', function (req, res) {
                 })
         }
     }
-})
+});
+*/
 //kopkoo //some dates
 app.get('/', (req, res) => {
     res.send('hello https');
