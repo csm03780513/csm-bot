@@ -21,7 +21,9 @@ const certificate = fs.readFileSync('/etc/letsencrypt/live/li1659-253.members.li
 const ca = fs.readFileSync('/etc/letsencrypt/live/li1659-253.members.linode.com/chain.pem', 'utf8');
 const httpsPort = 8443;
 const httpPort = 3000;
-const gameUrl = 'http://li1659-253.members.linode.com';
+const gameUrl = 'http://li1659-253.members.linode.com/';
+const math_assault_folder = 'math_assault'
+const jack_folder = 'jack';
 const botToken = '827718327:AAEqBDt4xdlULWUTSYgH04tSEdbUeEgQ1fc';
 const game_short_name = 'MathAssault';
 const queries = {};
@@ -137,7 +139,7 @@ bot.on('callback_query', function (query) {
         bot.answerCallbackQuery(query.id, "Sorry, '" + query.game_short_name + "' is not available.");
     } else {
         queries[query.id] = query;
-        let gameurl = gameUrl + "?id=" + query.id;
+        let gameurl = gameUrl + math_assault_folder + "?id=" + query.id;
         console.log('2.qry' + JSON.stringify(queries));
         bot.answerCallbackQuery({
             callback_query_id: query.id,
