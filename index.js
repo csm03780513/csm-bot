@@ -125,14 +125,10 @@ bot.on('message', (msg) => {
     if (msg.text.toLowerCase().includes('hi', 'hey')) {
         // send a message to the chat acknowledging receipt of their message
         return bot.sendMessage(chatId, 'Hello ' + msg.chat.first_name + ' ' + msg.chat.last_name + '\u{1F603}' + '\u{1F609}');
-    } else if (msg.text.toLowerCase.includes('browser')) {
-        return bot.sendMessage(
-            chat_id,
-            'HELLO MNBH',
-        )
+    } else if (msg.text.toLowerCase().includes('browser')) {
+        return bot.sendMessage(chat_id, 'HELLO MNBH');
     } else {
         return bot.sendMessage(chatId, 'Mmh, trying to be smart with me? \u{1F60F} I am still learning, I offer only games here. say something like->I want to play a game or click-> /play');
-
     }
 });
 
