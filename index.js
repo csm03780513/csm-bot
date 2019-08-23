@@ -128,13 +128,7 @@ bot.on('message', (msg) => {
     } else if (msg.text.toLowerCase.includes('browser')) {
         return bot.sendMessage(
             chat_id,
-            'hii',
-            {
-                inline_keyboard: [[{
-                    text: 'Share with your friends',
-                    switch_inline_query: 'share'
-                }]]
-            }
+            'HELLO MNBH',
         )
     } else {
         return bot.sendMessage(chatId, 'Mmh, trying to be smart with me? \u{1F60F} I am still learning, I offer only games here. say something like->I want to play a game or click-> /play');
