@@ -35,7 +35,6 @@ const credentials = {
     ca: ca
 };
 
-/*
 //This is the route the API will call
 app.all('/new-message', function (req, res) {
     const { message } = req.body;
@@ -53,7 +52,7 @@ app.all('/new-message', function (req, res) {
     // Respond by hitting the telegram bot API and responding to the approprite chat_id with the word "Polo!!"
     // Remember to use your own API toked instead of the one below  "https://api.telegram.org/bot<your_api_token>/sendMessage"
     if (message.text != undefined) {
-        if (message.text.toLowerCase().includes('game')) {
+        if (message.text.toLowerCase().includes('browser')) {
             axios
                 .post(
                     'https://api.telegram.org/bot' + botToken + '/sendGame',
@@ -110,7 +109,7 @@ app.all('/new-message', function (req, res) {
         }
     }
 });
-*/
+
 //kopkoo //some dates
 app.get('/', (req, res) => {
     res.send('hello https');
@@ -125,14 +124,6 @@ bot.on('message', (msg) => {
     if (msg.text.toLowerCase().includes('hi', 'hey')) {
         // send a message to the chat acknowledging receipt of their message
         return bot.sendMessage(chatId, 'Hello ' + msg.chat.first_name + ' ' + msg.chat.last_name + '\u{1F603}' + '\u{1F609}');
-    } else if (msg.text.toLowerCase().includes('browser')) {
-        return bot.sendMessage(chatId, 'HELLO MNBH',
-         [{
-            inline_keyboard: [[{
-                text: 'Share with your friends',
-                switch_inline_query: 'share'
-            }]]
-        }]);
     } else {
         return bot.sendMessage(chatId, 'Mmh, trying to be smart with me? \u{1F60F} I am still learning, I offer only games here. say something like->I want to play a game or click-> /play');
     }
