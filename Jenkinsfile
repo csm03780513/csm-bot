@@ -17,8 +17,8 @@ pipeline {
         stage('Booting App') {
             steps {
                // sh 'sudo pm2 stop index'
-               // sh 'pm2 restart index'
-               sh 'pm2 start index.js'
+                sh 'pm2 restart index'
+               // sh 'pm2 start index.js'
             }
         }
     }
