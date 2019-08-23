@@ -130,8 +130,8 @@ bot.on('message', (msg) => {
         return bot.sendMessage(chatId, "Check Buttons Below", {
             'reply_markup': {
                 'inline_keyboard': [[{
-                    'text': 'Share with your friends',
-                    'switch_inline_query': 'share'
+                    'text': 'Play math Assault',
+                    'url': gameUrl + math_assault_folder
                 }]]
             }
         });
