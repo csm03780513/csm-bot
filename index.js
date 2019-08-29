@@ -25,6 +25,7 @@ const gameUrl = 'http://li1659-253.members.linode.com/';
 const math_assault_folder = 'math_assault';
 const unity_game ='https://unity3d.com/tiny';
 const jack_folder = 'jack';
+const pair_match ='pair_match';
 const botToken = '827718327:AAEqBDt4xdlULWUTSYgH04tSEdbUeEgQ1fc';
 const game_short_name = 'MathAssault';
 const queries = {};
@@ -148,8 +149,8 @@ bot.on('callback_query', function (query) {
         bot.answerCallbackQuery(query.id, "Sorry, '" + query.game_short_name + "' is not available.");
     } else {
         queries[query.id] = query;
-        //let gameurl = gameUrl + math_assault_folder + "?id=" + query.id;
-        let gameurl = unity_game;
+        let gameurl = gameUrl + pair_match + "?id=" + query.id;
+        //let gameurl = unity_game;
         console.log('2.qry' + JSON.stringify(queries));
         bot.answerCallbackQuery({
             callback_query_id: query.id,
